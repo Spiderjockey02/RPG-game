@@ -23,7 +23,7 @@ function LoadGame(_slot) {
 		ds_map_copy(global.questStatus, _json[? "questStatus"]);
 		
 		//Move to room
-		room_goto(_json[? "room"]); //RoomTransition(TRANS_TYPE.SLIDE, _json[? "room"])
+		RoomTransition(TRANS_TYPE.FADE, _json[? "room"])
 		ds_map_destroy(_json)
 		return true;
 	} else {

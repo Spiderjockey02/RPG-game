@@ -19,9 +19,9 @@ if (keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"))) {
 if (keyboard_check_pressed(vk_enter) & keyPressed && !loadingStarted) {
 	global.gameSaveSlot = slotSelected;
 	if (!LoadGame(global.gameSaveSlot)) {
-		room_goto(rVillage) // RoomTransition(TRANS_TYPE.SLIDE, rVillage);
+		RoomTransition(TRANS_TYPE.FADE, rVillage);
 	}
 	loadingStarted = true;
 }
-if (keyboard_check_pressed(vk_anykey)) keyPressed = true;
+if (keyboard_check_pressed(vk_anykey) || mouse_check_button_pressed(mb_left)) keyPressed = true;
 
