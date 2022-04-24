@@ -1,5 +1,8 @@
 /// @desc Draw shadows
-if (entityShadow) draw_sprite(sShadow, 0, floor(x), floor(y))
+if (entityShadow) {
+	// scale the shadows width based on sprite width
+	draw_sprite_ext(sShadow, 0, floor(x), floor(y), (sprite_width/sprite_get_width(sShadow)), 1, 0, c_white, 1)
+}
 
 if (flash != 0) {
 	shader_set(flashShader);
