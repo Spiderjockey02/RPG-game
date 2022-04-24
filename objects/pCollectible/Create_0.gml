@@ -1,4 +1,4 @@
-/// @desc ??
+/// @desc Collectible setup
 // Inherit the parent event
 event_inherited();
 flash = 1;

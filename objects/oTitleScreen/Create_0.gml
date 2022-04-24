@@ -1,4 +1,4 @@
-/// @desc ??
+/// @desc Title screen setup
 titleVisible = 0.0;
 keyPressed = false;
 slotsVisible = 0.0;

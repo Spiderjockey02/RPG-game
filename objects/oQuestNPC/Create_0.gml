@@ -1,4 +1,4 @@
-/// @desc ??
+/// @desc Show hat if quest is complete
 // Inherit the parent event
 event_inherited();
 

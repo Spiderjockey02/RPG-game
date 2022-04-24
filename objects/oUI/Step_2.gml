@@ -1,4 +1,4 @@
-/// @desc ??
+/// @desc Interact with pause screen
 visible = (room != rTitle);
 
 if (global.gamePaused) {

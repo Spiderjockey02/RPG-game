@@ -1,4 +1,4 @@
-/// @desc ??
+/// @desc Draw title screen
 if (titleVisible > 0) {
 	draw_sprite(sTitle, 0, 0, -RESOLUTION_H + titleVisible * RESOLUTION_H);
 	draw_set_alpha(titleVisible * abs(sin(get_timer() * 0.000001 * pi)));
@@ -7,7 +7,7 @@ if (titleVisible > 0) {
 }
 
 if (slotsVisible > 0) {
-		// Draw save slots
+	// Draw save slots
 	draw_set_alpha(slotsVisible);
 	for (var _slot = 0; _slot <= 2; _slot++) {
 		// Draw save boxes

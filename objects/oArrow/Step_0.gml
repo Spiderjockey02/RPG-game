@@ -17,7 +17,7 @@ if (_entity != noone) {
 	if (_break) instance_destroy();
 }
 
-//Destory, if arrow goes out of camera view;
+// Destory, if arrow goes out of camera view;
 var _cam = view_camera[0];
 var _camX = camera_get_view_x(_cam);
 var _camY = camera_get_view_y(_cam);

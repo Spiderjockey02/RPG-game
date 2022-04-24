@@ -39,8 +39,8 @@
     {"propertyId":{"name":"entityFragmentCount","path":"objects/pEntity/pEntity.yy",},"objectId":{"name":"pEntity","path":"objects/pEntity/pEntity.yy",},"value":"3","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
-    "name": "Entities",
-    "path": "folders/Objects/Entities.yy",
+    "name": "Carryable",
+    "path": "folders/Objects/Entities/Carryable.yy",
   },
   "resourceVersion": "1.0",
   "name": "oRock",

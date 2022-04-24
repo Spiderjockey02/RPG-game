@@ -1,3 +1,74 @@
+// @desc PlayerStateAct()
+function PlayerStateAct() {
+	PlayerAnimateSprite()
+	
+	if (animationEnded) {
+		state = PlayerStateFree;
+		animationEnded = false;
+		if (animationEndScript != -1) {
+			script_execute(animationEndScript);
+			animationEndScript = -1;
+		}
+	}
+}
+
+// @desc PlayerStateAttack()
+function PlayerStateAttack() {
+	script_execute(stateAttack);
+}
+
+// @desc PlayerStateBonk()
+function PlayerStateBonk() {
+	// Movement
+	hSpeed = lengthdir_x(speedBonk, direction - 180);
+	vSpeed = lengthdir_y(speedBonk, direction - 180);
+	
+	moveDistanceRemaining = max(0, moveDistanceRemaining - speedBonk);
+	PlayerCollision();
+	
+	// Update sprite
+	sprite_index = sPlayerHurt;
+	image_index = CARDINAL_DIR - 2;
+	
+	// Change height
+	z = sin(((moveDistanceRemaining / distanceBonk) * pi)) * distanceBonkHeight;
+	
+	// Change state
+	if (moveDistanceRemaining <= 0) {
+		state = PlayerStateFree;
+	};
+}
+
+// @desc PlayerStateDead()
+function PlayerStateDead() {
+	hSpeed = 0;
+	vSpeed = 0;
+	
+	if (sprite_index != sPlayerDie && sprite_index != sPlayerDead) {
+		sprite_index = sPlayerDie;
+		image_index = 0;
+		image_speed = 0.7;
+	}
+	
+	if (image_index + image_speed > image_number) {
+		if (sprite_index == sPlayerDie) {
+			image_speed = max(0, image_speed-0.03);
+			if (image_speed < 0.07) {
+				image_index = 0;
+				sprite_index = sPlayerDead;
+				image_speed = 1.0;
+			}
+		} else {
+			image_speed = 0;
+			image_index = image_number-1;
+			global.targetX = -1;
+			global.targetY = -1;
+			RoomTransition(TRANS_TYPE.STAR,rVillage);
+		}
+	}
+}
+
+// @desc PlayerStateFree()
 function PlayerStateFree() {
 	// Movement
 	hSpeed = lengthdir_x(inputMagnitude * speedWalk, inputDirection);
@@ -104,4 +175,42 @@ function PlayerStateFree() {
 		}
 	}
 	
+}
+
+// @desc PlayerStateRoll()
+function PlayerStateRoll() {
+	// Movement
+	hSpeed = lengthdir_x(speedRoll, direction);
+	vSpeed = lengthdir_y(speedRoll, direction);
+	
+	moveDistanceRemaining = max(0, moveDistanceRemaining - speedRoll);
+	var _collided = PlayerCollision();
+	
+	// Update sprite
+	sprite_index = spriteRoll;
+	var _totalFrames = sprite_get_number(sprite_index) / 4;
+	image_index = (CARDINAL_DIR * _totalFrames) + min((1 - (moveDistanceRemaining / distanceRoll)) * _totalFrames, _totalFrames - 1);
+	
+	// Change state
+	if (moveDistanceRemaining <= 0) {
+		state = PlayerStateFree;
+	};
+	
+	if (_collided) {
+		state = PlayerStateBonk;
+		moveDistanceRemaining = distanceBonk
+		ScreenShake(4, 30);
+	}
+}
+
+// @desc PlayerStateTransition()
+function PlayerStateTransition() {
+	PlayerCollision();
+	
+	PlayerAnimateSprite();
+}
+
+// @desc PlayerStateLocked()
+function PlayerStateLocked() {
+
 }

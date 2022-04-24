@@ -1,4 +1,4 @@
-/// @desc PlayerActOutAnimation(sprite, endScript)
+/// @desc PlayerActOutAnimation(sprite, endScript = "undefined")
 /// @arg Sprite
 /// @arg endScript
 function PlayerActOutAnimation(sprite, endScript = "undefined") {

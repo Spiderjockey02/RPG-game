@@ -1,3 +1,4 @@
+/// @desc PlayerCollision()
 function PlayerCollision() {
 	var _collision = false
 	var _entityList = ds_list_create();

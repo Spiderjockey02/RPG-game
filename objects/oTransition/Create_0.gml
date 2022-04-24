@@ -1,4 +1,4 @@
-/// @desc ??
+/// @desc Transition setup
 enum TRANS_TYPE {
 	SLIDE,
 	FADE,

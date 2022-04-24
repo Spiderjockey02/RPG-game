@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Slime",
-    "path": "folders/Scripts/Slime.yy",
+    "name": "Enemies",
+    "path": "folders/Scripts/Entities/Enemies.yy",
   },
   "resourceVersion": "1.0",
   "name": "SlimeStates",

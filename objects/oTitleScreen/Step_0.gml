@@ -1,4 +1,4 @@
-/// @desc ??
+/// @desc Interact with the title screen
 if (!keyPressed) {
 	titleVisible = min(1, titleVisible + 0.01);
 } else {

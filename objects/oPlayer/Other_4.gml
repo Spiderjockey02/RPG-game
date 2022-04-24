@@ -1,2 +1,2 @@
-/// @desc ??
+/// @desc Save the game
 SaveGame();

@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "Enemies",
+    "path": "folders/Scripts/Entities/Enemies.yy",
   },
   "resourceVersion": "1.0",
   "name": "EnemyWait",

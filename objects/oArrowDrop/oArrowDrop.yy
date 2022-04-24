@@ -32,8 +32,8 @@
     {"propertyId":{"name":"collectScriptArg","path":"objects/pCollectible/pCollectible.yy",},"objectId":{"name":"pCollectible","path":"objects/pCollectible/pCollectible.yy",},"value":"[ITEM.BOW, 2]","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
-    "name": "Entities",
-    "path": "folders/Objects/Entities.yy",
+    "name": "Collectibles",
+    "path": "folders/Objects/Entities/Collectibles.yy",
   },
   "resourceVersion": "1.0",
   "name": "oArrowDrop",

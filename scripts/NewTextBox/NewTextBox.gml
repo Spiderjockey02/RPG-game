@@ -1,21 +1,21 @@
-/// @desc NewTextBox(argument0, argument1, argument2)
+/// @desc NewTextBox(_text, _background, argument2 = [])
 ///	@arg text
 ///	@arg background
 /// @arg responses
-function NewTextBox(argument0, argument1, argument2 = []) {
+function NewTextBox(_text, _background, _responses = []) {
 	var _obj;
 	if (instance_exists(oText)) _obj = oTextQueued; else _obj = oText;
 	with (instance_create_layer(0, 0, "Instances", _obj)) {
-		message = argument0;
+		message = _text;
 		if (instance_exists(other)) originInstance = other.id; else originInstance = noone;
-		background = argument1;
+		background = _background;
 		
-		if (array_length(argument2) >= 1) {
-			for (var i = 0; i < array_length(argument2); i++) {
-				var _markerPosition = string_pos(":", argument2[i]);
-				responseScripts[i] = string_copy(argument2[i], 1, _markerPosition-1);
+		if (array_length(_responses) >= 1) {
+			for (var i = 0; i < array_length(_responses); i++) {
+				var _markerPosition = string_pos(":", _responses[i]);
+				responseScripts[i] = string_copy(_responses[i], 1, _markerPosition-1);
 				responseScripts[i] = real(responseScripts[i]);
-				responses[i] = string_delete(argument2[i], 1, _markerPosition)
+				responses[i] = string_delete(_responses[i], 1, _markerPosition)
 			}
 		} else {
 			responses = [-1];

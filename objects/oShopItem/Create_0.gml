@@ -1,4 +1,4 @@
-/// @desc ??
+/// @desc Show available items to buy
 
 // Inherit the parent event
 event_inherited();

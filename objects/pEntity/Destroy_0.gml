@@ -4,7 +4,6 @@ if (entityFragmentCount > 0) {
 	DropItems(x, y, fragmentArray)
 }
 
-//Drop some coins or smth
-if (entityDropList != -1) {
-	DropItems(x, y, entityDropList);
-}
+// Drop some coins or smth
+if (entityDropList != -1) DropItems(x, y, entityDropList);
+

@@ -29,8 +29,8 @@
     {"propertyId":{"name":"bounceCount","path":"objects/oFragment/oFragment.yy",},"objectId":{"name":"oFragment","path":"objects/oFragment/oFragment.yy",},"value":"1","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Decoration",
+    "path": "folders/Objects/Decoration.yy",
   },
   "resourceVersion": "1.0",
   "name": "oFragRock",

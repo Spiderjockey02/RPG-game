@@ -3,7 +3,7 @@ flash = max(0, flash-0.05)
 fric = 0.05;
 if (z == 0) fric = 0.10;
 
-//Move to player, like magnet
+// Move to player, like magnet
 if (instance_exists(oPlayer)) {
 	var _px = oPlayer.x;
 	var _py = oPlayer.y;
@@ -24,7 +24,7 @@ if (instance_exists(oPlayer)) {
 	}
 }
 
-// Bounce
+// Bounce when first shown
 if (bounceCount != 0) {
 	bounce += (pi * bounceSpeed);
 	if (bounce > pi) {

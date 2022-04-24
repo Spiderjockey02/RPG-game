@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Player State Machine",
-    "path": "folders/Scripts/Player State Machine.yy",
+    "name": "Player",
+    "path": "folders/Scripts/Player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "PlayerStateRoll",
+  "name": "PlayerStates",
   "tags": [],
   "resourceType": "GMScript",
 }

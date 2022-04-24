@@ -1,5 +1,0 @@
-function PlayerStateTransition() {
-	PlayerCollision();
-	
-	PlayerAnimateSprite();
-}

@@ -1,4 +1,4 @@
-/// @desc Throw the object the player is holding
+/// @desc PlayerThrow()
 function PlayerThrow() {
 	with (global.iLifted) {
 		lifted = false;

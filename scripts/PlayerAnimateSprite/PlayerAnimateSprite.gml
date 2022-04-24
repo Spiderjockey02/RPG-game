@@ -1,3 +1,4 @@
+/// @desc PlayerAnimateSprite()
 function PlayerAnimateSprite() {
 	var _totalFrames = sprite_get_number(sprite_index) / 4;
 	image_index = localFrame + (CARDINAL_DIR * _totalFrames)

@@ -1,4 +1,4 @@
-/// @desc ??
+/// @desc Bomb tick till BOOM
 // Inherit the parent event
 event_inherited()
 
