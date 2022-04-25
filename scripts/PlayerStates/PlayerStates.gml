@@ -63,7 +63,8 @@ function PlayerStateDead() {
 			image_index = image_number-1;
 			global.targetX = -1;
 			global.targetY = -1;
-			RoomTransition(TRANS_TYPE.STAR,rVillage);
+			RoomTransition(TRANS_TYPE.STAR, rVillage);
+			global.playerHealth = global.playerHealthMax;
 		}
 	}
 }
