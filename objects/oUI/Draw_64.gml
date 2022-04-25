@@ -14,14 +14,14 @@ for (var i = 1; i <= _playerHealthMax; i++) {
 		_imageIndex += (_playerHealthFrac > 0.50);
 	}
 	
-	draw_sprite(sHealth, _imageIndex, 8 + ((i-1) * 16), 8)
+	draw_sprite(sHealth, _imageIndex, 260 + ((i-1) * 16), 8)
 }
 
 /// Draw coin counter UI
 var _xx, _yy;
 
 // Coin Icon
-_xx = 28;
+_xx = 280;
 _yy = 28;
 draw_sprite(sCoinUI, 0, _xx, _yy);
 
@@ -41,7 +41,7 @@ draw_set_color(c_white);
 draw_text(_xx, _yy, _str);
 
 /// Draw Item UI
-_xx = 8;
+_xx = 260;
 _yy = 24;
 draw_sprite(sItemUIBox, 0, _xx, _yy);
 if (global.playerHasAnyItems) {
