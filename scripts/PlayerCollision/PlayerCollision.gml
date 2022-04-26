@@ -4,7 +4,7 @@ function PlayerCollision() {
 	var _entityList = ds_list_create();
 	
 	//	Horizontal tiles
-	if (tilemap_get_at_pixel(collisionMap, x + hSpeed, y)) {
+	if (tilemap_get_at_pixel(collisionMap, x + hSpeed, y) || !point_in_rectangle(x + hSpeed, y, 0, 0, room_width, room_height)) {
 		x -= x mod TILE_SIZE;
 		if (sign(hSpeed) == 1) x += TILE_SIZE - 1;
 		hSpeed = 0;
@@ -34,7 +34,7 @@ function PlayerCollision() {
 	ds_list_clear(_entityList);
 	
 	//	Vertical tiles
-	if (tilemap_get_at_pixel(collisionMap, x, y + vSpeed)) {
+	if (tilemap_get_at_pixel(collisionMap, x, y + vSpeed) || !point_in_rectangle(x, y + vSpeed, 0, 0, room_width, room_height)) {
 		y -= y mod TILE_SIZE;
 		if (sign(vSpeed) == 1) y += TILE_SIZE - 1;
 		vSpeed = 0;
