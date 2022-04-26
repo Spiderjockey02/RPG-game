@@ -35,6 +35,7 @@
     {"id":{"name":"EntityHitSolid","path":"scripts/EntityHitSolid/EntityHitSolid.yy",},"order":1,},
     {"id":{"name":"sPlayerDie","path":"sprites/sPlayerDie/sPlayerDie.yy",},"order":8,},
     {"id":{"name":"sFrag_Plant","path":"sprites/sFrag_Plant/sFrag_Plant.yy",},"order":0,},
+    {"id":{"name":"FormatNumber","path":"scripts/FormatNumber/FormatNumber.yy",},"order":6,},
     {"id":{"name":"sPlayerRoll","path":"sprites/sPlayerRoll/sPlayerRoll.yy",},"order":4,},
     {"id":{"name":"sPlayerAttackSlashHB","path":"sprites/sPlayerAttackSlashHB/sPlayerAttackSlashHB.yy",},"order":2,},
     {"id":{"name":"HurtPlayer","path":"scripts/HurtPlayer/HurtPlayer.yy",},"order":4,},

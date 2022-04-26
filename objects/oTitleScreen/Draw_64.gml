@@ -44,7 +44,7 @@ if (slotsVisible > 0) {
 				draw_sprite(sHealth, _imageIndex, _x +48 + ((i-1) * 16), _y +24);
 			}
 			draw_sprite(sCoinUI, 0, _x+8, _y+28);
-			draw_text(_x + 20, _y+24, slotData[_slot][? "playerMoney"]);
+			draw_text(_x + 20, _y+24, FormatNumber(slotData[_slot][? "playerMoney"]));
 		}
 	}
 	draw_set_alpha(1.0);

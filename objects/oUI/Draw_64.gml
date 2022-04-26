@@ -32,7 +32,7 @@ draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 _xx += sprite_get_width(sCoinUI) + 4;
 _yy = 24;
-var _str = string(global.playerMoney);
+var _str = FormatNumber(string(global.playerMoney));
 draw_text(_xx+1, _yy, _str);
 draw_text(_xx-1, _yy, _str);
 draw_text(_xx, _yy+1, _str);
