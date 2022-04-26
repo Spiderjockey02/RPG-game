@@ -57,9 +57,6 @@ if (global.playerHasAnyItems) {
 
 // Draw pause GUI
 if (global.gamePaused) {
-	draw_set_color(c_black)
-	draw_set_alpha(0.75)
-	draw_rectangle(0,0, RESOLUTION_W, RESOLUTION_H, false)
 	draw_set_alpha(1.0)
 	draw_set_color(c_white)
 	draw_set_font(fText)

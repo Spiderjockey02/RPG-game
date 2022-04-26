@@ -22,3 +22,9 @@ if (instance_exists(oPlayer)) {
 	
 	draw_sprite_stretched(sMinimapBox, 0, x-6, y-6, w+12, h+12);
 }
+
+if (global.gamePaused) {
+	draw_set_color(c_black)
+	draw_set_alpha(0.75)
+	draw_rectangle(0, 0, RESOLUTION_W, RESOLUTION_H, false)
+}
